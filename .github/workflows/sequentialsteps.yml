@@ -19,13 +19,13 @@ jobs:
           node-version: '18'
 
       - name: Step 3 - Install Dependencies
-        run: npm install
+        run: sleep 10
 
       - name: Step 4 - Run Tests
-        run: npm test
+        run: sleep 10
 
       - name: Step 5 - Build Project
-        run: npm run build
+        run: sleep 15
 
       - name: Step 6 - Deploy Application (Only if All Previous Steps Succeed)
         run: echo "Deploying application..."
