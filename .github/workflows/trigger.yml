@@ -1,0 +1,19 @@
+name: Print Commit ID and Message
+
+on:
+  push:
+    branches:
+      - '*'  # Runs on all branches
+
+jobs:
+  log_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Latest Commit Info
+        run: |
+          echo "Commit ID: ${{ github.sha }}"
+          echo "Commit Message: $(git log -1 --pretty=%B)"
