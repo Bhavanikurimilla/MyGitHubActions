@@ -1,4 +1,4 @@
-name: Print Commit ID and Message
+name: Print Commit ID and Commit Message
 
 on:
   push:
